@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        .center{
+            width: 40px;
+            height: 100px;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .center::before,.center::after{
+            content:'';
+            width: 180px;
+            height: 100px;
+            position: absolute;
+            border: 0.5px solid #aaa;
+        }
+        .center::before{
+            background: linear-gradient(180deg, #fff, #ddd 40%, #ccc 60%, #ddd 70%, #fff 100%);
+            right: 40px;
+        }
+        .center::after{
+            background: linear-gradient(180deg, #f7f7a5, #dede94 40%, #cfcf8a 60%, #dede94 70%, #f7f7a5 100%);
+            left: 40px;
+            z-index: -1;
+        }
+
+        .block-sm,.other,.deg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .block-sm::before,.block-sm::after{
+            content:'';
+            width: 40px;
+            height: 60px;
+            background: linear-gradient(180deg, #fff, #ddd 40%, #ccc 60%, #ddd 70%, #fff 100%);
+            border: 0.5px solid #aaa;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .block-sm::before{
+            border-right: 0px;
+            right: 220px;
+        }
+        .block-sm::after{
+            left: 220px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .other::before,.other::after{
+            content:'';
+            border: 0.5px solid #aaa;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .other::before{
+            width: 40px;
+            height: 100px;
+            background: linear-gradient(180deg, #fff, #ddd 40%, #ccc 60%, #ddd 70%, #fff 100%);
+            right: 260px;
+            border-radius: 5px;
+        }
+        .other::after{
+            width: 100px;
+            height: 1px;
+            left: 260px;
+        }
+
+        .deg ul{
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+            width: 400px;
+            position: absolute;
+            left: -180px;
+        }
+        .deg li{
+            list-style: none;
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-right: 1px solid #999;
+        }
+        .deg li:nth-child(10){
+            border-right: none;
+        }
+        .deg li:nth-child(11){
+            border-right: none;
+        }
+        
+        .deg::after{
+            content:'Made in Taiwan';
+            position: absolute;
+            left: -180px;
+            bottom: 0;
+            color: #999;
+            font-family: '微軟正黑體';
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="block-sm">
+            <div class="other">
+                <div class="deg">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
